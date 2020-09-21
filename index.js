@@ -18,7 +18,7 @@ module.exports = class MaskMessage extends Plugin {
         const split = string.split(' | ');
 
         try {
-            await messages.sendMessage(channels.getChannelId(), { content: `${split[0]} ${' _'.repeat(399)} ${split[1]}` });
+            await messages.sendMessage(channels.getChannelId(), { content: `${split[0]} ${'​'.repeat(399)} ${split[1]}` });
         } catch (err) {
             console.error(`[MaskMessage] -> ${err}`);
             return;
